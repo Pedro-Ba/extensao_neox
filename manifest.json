@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "Retira pedido Advert Neox",
+	"description": "Remove o popup pedindo para desligar o adblocker na Neox",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": ["https://neoxscans.net/*"],
+			"run_at": "document_idle",
+			"js": ["content-script.js"]
+		}
+	],
+	"permissions": [
+		"tabs",
+		"storage",
+		"activeTab",
+		"scripting",
+		"downloads"
+	]
+}
